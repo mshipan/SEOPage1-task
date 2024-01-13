@@ -9,5 +9,8 @@ export default {
       notoSansJP: ["Noto Sans JP", "sans-serif"],
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
