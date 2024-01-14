@@ -1,3 +1,4 @@
+import { useState } from "react";
 import user1 from "../assets/user1.jpg";
 import user2 from "../assets/user2.jpg";
 import user3 from "../assets/user3.jpeg";
@@ -6,8 +7,18 @@ import { FaLayerGroup } from "react-icons/fa";
 import { FaClipboardList } from "react-icons/fa";
 import { FaRegComments, FaRegCalendarDays } from "react-icons/fa6";
 import { GrAttachment } from "react-icons/gr";
+import Modal from "./Modal";
 
 const TaskCard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="bg-white p-4 flex flex-col gap-3">
       <div className="flex items-center justify-between">
@@ -48,7 +59,7 @@ const TaskCard = () => {
           <FaRegComments className="text-slate-500" />
           <p className="font-notoSansJP text-black">15</p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2" onClick={openModal}>
           <GrAttachment className="text-slate-500" />
           <p className="font-notoSansJP text-black">25</p>
         </div>
@@ -57,6 +68,8 @@ const TaskCard = () => {
           <p className="font-notoSansJP text-black">30-12-2022</p>
         </div>
       </div>
+      {/* Modal */}
+      <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
     </div>
   );
 };
