@@ -4,9 +4,9 @@
 
 ## Live server - (under construction)
 
-# Technology Used
+## Server Site Github Repo - https://github.com/mshipan/SEOPage1-task-server
 
----
+# Technology Used
 
 - React.js (VITE)
 - Tailwind Css, Daisy Ui

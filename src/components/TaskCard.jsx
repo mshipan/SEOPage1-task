@@ -59,7 +59,10 @@ const TaskCard = () => {
           <FaRegComments className="text-slate-500" />
           <p className="font-notoSansJP text-black">15</p>
         </div>
-        <div className="flex items-center gap-2" onClick={openModal}>
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={openModal}
+        >
           <GrAttachment className="text-slate-500" />
           <p className="font-notoSansJP text-black">25</p>
         </div>
